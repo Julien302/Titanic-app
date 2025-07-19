@@ -27,3 +27,5 @@ python TrainModel.py
 
 # Puis lancez l'app
 streamlit run app.py
+
+git remote add origin https://github.com/Julien302/Titanic-app
