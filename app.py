@@ -8,13 +8,13 @@ import seaborn as sns
 # ---------- Données pour la partie Exploration/DataViz -------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("train.csv")
+    return pd.read_csv("data/train.csv")
 df = load_data()
 
 # ---------- Chargement du modèle déjà entraîné ----------------------
 @st.cache_resource  # garde le modèle une fois en mémoire
 def load_model():
-    artifact = joblib.load("model.joblib")
+    artifact = joblib.load("model/model.joblib")
     return artifact["model"], artifact["preprocessor"]
 
 model, preprocessor = load_model()

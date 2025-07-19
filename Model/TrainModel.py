@@ -17,8 +17,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
 import joblib
 
-DATA_PATH = Path(__file__).resolve().parent / "train.csv"
-MODEL_PATH = Path(__file__).resolve().parent / "model.joblib"
+DATA_PATH = Path(__file__).resolve().parent.parent / "Data" / "train.csv"
+MODEL_PATH = Path(__file__).resolve().parent / "model" / "model.joblib"
 RANDOM_STATE = 123
 
 def load_data(path: Path) -> pd.DataFrame:
