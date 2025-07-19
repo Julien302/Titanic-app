@@ -1,0 +1,29 @@
+////Explications
+
+📋 Analyse de vos fichiers
+1. App.py → Votre application Streamlit principale (version avancée)
+Interface complète avec 3 pages : Exploration, DataViz, Prédictions
+Utilise un modèle pré-entraîné (model.joblib)
+Interface de prédiction interactive
+
+2. TrainModel.py → Script d'entraînement du modèle
+Entraîne un RandomForest sur les données Titanic
+Sauvegarde le modèle dans model.joblib
+À exécuter AVANT d'utiliser App.py
+
+3. BonnesPratiques.py → Exemple/test de cache Streamlit
+Démo du décorateur @st.cache_data
+/////
+
+Il faut commencer par activer l'environnement virtuel puis activer les dépendances
+
+source .venv/bin/activate
+(La première fois uniquement)
+python -m pip install --upgrade pip
+python -m pip install streamlit pandas scikit-learn joblib matplotlib seaborn
+
+# Entraînez d'abord votre modèle
+python TrainModel.py
+
+# Puis lancez l'app
+streamlit run app.py
